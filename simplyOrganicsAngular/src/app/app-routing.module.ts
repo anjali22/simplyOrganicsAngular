@@ -42,9 +42,9 @@ import { AppFooter, AppHeader, AppSidebar, AppThemeConfig, SessionModal} from '.
 import { appRoutes } from './admin/admin.routing'
 
 const routes: Routes = [
-   {path: '', redirectTo:'/admin', pathMatch: 'full'},
+   {path: '', redirectTo:'/admin/home', pathMatch: 'full'},
     ...appRoutes,
-   {path: 'admin', component: AdminComponent}
+   //{path: 'admin', component: AdminComponent}
    //{path: 'home', component: HomeComponent}
 ]
 

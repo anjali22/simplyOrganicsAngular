@@ -28,13 +28,7 @@ APP.UI = {
 };
 
 $(window).on('load resize scroll', function () {
-    if ($(this).width() < 992 && !$('body').hasClass('sidebar-mini')) {
-        $('body').addClass('drawer-sidebar');
-        $('#sidebar-collapse').slimScroll({
-            height: '100%',
-            railOpacity: '0.9',
-        });
-    }
+    if ($(this).width() < 992) $('body').removeClass('sidebar-mini').addClass('drawer-sidebar');
 });
 
 $(function () {

@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
-//import * as $ from 'jquery';
 
 declare var jQuery:any;
 declare var $:any;
