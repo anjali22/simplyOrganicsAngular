@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './pages/home/home.component';
+import { AdminHomeComponent } from './pages/adminhome/adminhome.component';
 import { Dashboard2Component } from './pages/dashboard_2/dashboard_2.component';
 import { Dashboard3Component } from './pages/dashboard_3/dashboard_3.component';
 import { Dashboard4Component } from './pages/dashboard_4/dashboard_4.component';
@@ -26,7 +26,6 @@ import { TimelineComponent } from './pages/timeline/timeline.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SearchComponent } from './pages/search/search.component';
-import { LoginComponent } from './pages/login/login.component';
 import { LoginDarkComponent } from './pages/login-dark/login-dark.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { RegisterDarkComponent } from './pages/register-dark/register-dark.component';
@@ -34,6 +33,7 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
 import { LockscreenComponent } from './pages/lockscreen/lockscreen.component';
 import { Error404Component } from './pages/error-404/error-404.component';
 import { Error500Component } from './pages/error-500/error-500.component';
+//import { CustomerEditComponent} from './pages/customer-edit/customer-edit.component';
 
 // Import Containers
 import {
@@ -42,12 +42,13 @@ import {
 } from './layouts';
 
 
-export const appRoutes: Routes = [
+export const adminRoutes: Routes = [
   {
     path: 'admin',
     component: FullLayout,
     children: [
-      { path: 'home', component: HomeComponent},
+      { path: 'adminhome', component: AdminHomeComponent},
+      //{ path: 'customer_edit', component: CustomerEditComponent},
       { path: 'dashboard_2', component: Dashboard2Component},
       { path: 'dashboard_3', component: Dashboard3Component},
       { path: 'dashboard_4', component: Dashboard4Component},
@@ -78,7 +79,7 @@ export const appRoutes: Routes = [
     path: 'admin',
     component: SimpleLayout,
     children: [
-      { path: 'login', component: LoginComponent},
+     // { path: 'login', component: LoginComponent},
       { path: 'login_dark', component: LoginDarkComponent},
       { path: 'register', component: RegisterComponent},
       { path: 'register_dark', component: RegisterDarkComponent},
@@ -90,20 +91,20 @@ export const appRoutes: Routes = [
   },
   {
       path: '**',
-      redirectTo: '/'
+      redirectTo: '/login'
   }
 ];
 
 
 @NgModule({
-  imports: [ RouterModule.forRoot(appRoutes) ],
+  imports: [ RouterModule.forRoot(adminRoutes) ],
   exports: [ RouterModule ],
   declarations: [
-    HomeComponent, Dashboard2Component, Dashboard3Component, Dashboard4Component, Dashboard5Component, Datatable, 
+    AdminHomeComponent, Dashboard2Component, Dashboard3Component, Dashboard4Component, Dashboard5Component, Datatable, 
     ChartJS, Peity, SparklineComponent, MorrisChartComponent, IconsComponent, WidgetsComponent,
     Mailbox, MailView, MailCompose, Blog, Article, EcommerceProdutsBoard, EcommerceProdutsList, EcommerceProdutsEdit, 
     InvoiceComponent, TimelineComponent, FaqComponent, ProfileComponent, SearchComponent,
-    LoginComponent,
+    //LoginComponent,
     LoginDarkComponent,
     RegisterComponent,
     RegisterDarkComponent,
@@ -111,7 +112,8 @@ export const appRoutes: Routes = [
     LockscreenComponent,
     Error404Component,
     Error500Component,
-    FullLayout
+    FullLayout,
+  //CustomerEditComponent,
   ]
 })
 export class AppRoutingModule {}

@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from "./admin/admin.component";
-//import { HomeComponent } from "./home/home.component";
 import { FullLayout, SimpleLayout} from './admin/layouts'
-import { HomeComponent } from "./admin/pages/home/home.component";
+import { AdminHomeComponent } from "./admin/pages/adminhome/adminhome.component";
 import { Dashboard2Component } from './admin/pages/dashboard_2/dashboard_2.component';
 import { Dashboard3Component } from './admin/pages/dashboard_3/dashboard_3.component';
 import { Dashboard4Component } from './admin/pages/dashboard_4/dashboard_4.component';
@@ -28,7 +27,7 @@ import { TimelineComponent } from './admin/pages/timeline/timeline.component';
 import { FaqComponent } from './admin/pages/faq/faq.component';
 import { ProfileComponent } from './admin/pages/profile/profile.component';
 import { SearchComponent } from './admin/pages/search/search.component';
-import { LoginComponent } from './admin/pages/login/login.component';
+//import { LoginComponent } from './admin/pages/login/login.component';
 import { LoginDarkComponent } from './admin/pages/login-dark/login-dark.component';
 import { RegisterComponent } from './admin/pages/register/register.component';
 import { RegisterDarkComponent } from './admin/pages/register-dark/register-dark.component';
@@ -37,31 +36,82 @@ import { LockscreenComponent } from './admin/pages/lockscreen/lockscreen.compone
 import { Error404Component } from './admin/pages/error-404/error-404.component';
 import { Error500Component } from './admin/pages/error-500/error-500.component';
 import { AppFooter, AppHeader, AppSidebar, AppThemeConfig, SessionModal} from './admin/components/index'
+//import {CustomerEditComponent} from './admin/pages/customer-edit/customer-edit.component';
+import {CustomerEditComponent} from './customer-edit/customer-edit.component';
+import { adminRoutes } from './admin/admin.routing'
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { LoginComponent} from './login/login.component';
 
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'login', component: LoginComponent},
+  {path: 'admin', component: FullLayout, 
+    children: [
+      {path: '', component: AdminHomeComponent },
+      { path: 'dashboard_2', component: Dashboard2Component},
+      { path: 'dashboard_3', component: Dashboard3Component},
+      { path: 'dashboard_4', component: Dashboard4Component},
+      { path: 'dashboard_5', component: Dashboard5Component},
+      { path: 'customer_edit', component: CustomerEditComponent},
+      { path: 'datatable', component: Datatable},
+      { path: 'chartjs', component: ChartJS},
+      { path: 'charts-peity', component: Peity},
+      { path: 'charts-sparkline', component: SparklineComponent},
+      { path: 'charts-morris', component: MorrisChartComponent},
+      { path: 'widgets', component: WidgetsComponent},
+      { path: 'icons', component: IconsComponent},
+      { path: 'mailbox', component: Mailbox},
+      { path: 'mail_view', component: MailView},
+      { path: 'mail_compose', component: MailCompose},
+      { path: 'blog', component: Blog},
+      { path: 'article', component: Article},
+      { path: 'ecommerce_products_board', component: EcommerceProdutsBoard},
+      { path: 'ecommerce_products_list', component: EcommerceProdutsList},
+      { path: 'ecommerce_products_edit', component: EcommerceProdutsEdit},
+      { path: 'invoice', component: InvoiceComponent},
+      { path: 'timeline', component: TimelineComponent},
+      { path: 'faq', component: FaqComponent},
+      { path: 'search', component: SearchComponent},
+      { path: 'profile', component: ProfileComponent},
+    ]  
+}
+  //{ path: 'login', component: FullLayout},
+  // children: [
+  //   { path: '', component: AdminHomeComponent }, // url: about/
+    
+  // ]
 
-import { appRoutes } from './admin/admin.routing'
+  //{// path: '**', component: HomeComponent },
+  //...adminRoutes,
+];
 
-const routes: Routes = [
-   {path: '', redirectTo:'/admin/home', pathMatch: 'full'},
-    ...appRoutes,
-   //{path: 'admin', component: AdminComponent}
-   //{path: 'home', component: HomeComponent}
-]
+// const routes: Routes = [
+//    {path: '', redirectTo:'/admin/home', pathMatch: 'full'},
+//     ...appRoutes,
+//    //{path: 'admin', component: AdminComponent}
+//    //{path: 'home', component: HomeComponent}
+//    // { path: '/admin/home/customer_edit', component: CustomerEditComponent},
+
+// ]
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(appRoutes)
   ],
   exports: [ RouterModule ],
   
   declarations: [
     FullLayout, SimpleLayout,
-    HomeComponent,
+    AdminHomeComponent,
     Dashboard2Component, Dashboard3Component, Dashboard4Component, Dashboard5Component, Datatable, 
     ChartJS, Peity, SparklineComponent, MorrisChartComponent, IconsComponent, WidgetsComponent,
     Mailbox, MailView, MailCompose, Blog, Article, EcommerceProdutsBoard, EcommerceProdutsList, EcommerceProdutsEdit, 
     InvoiceComponent, TimelineComponent, FaqComponent, ProfileComponent, SearchComponent,
-    LoginComponent,
+    
     LoginDarkComponent,
     RegisterComponent,
     RegisterDarkComponent,
@@ -74,7 +124,8 @@ const routes: Routes = [
     AppFooter,
     AppHeader,
     SessionModal,
-    AppThemeConfig
+    AppThemeConfig,
+    //CustomerEditComponent,
   ]
 })
 export class AppRoutingModule {}

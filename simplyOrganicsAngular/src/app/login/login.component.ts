@@ -1,16 +1,30 @@
 import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import {ElementRef} from '@angular/core';
+import {AuthenticationService, User} from '../authentication.service'
 
 declare var jQuery:any;
 declare var $:any;
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-login-dark',
   templateUrl: './login.component.html',
-  styleUrls: ['../../../../assets/css/pages/auth-light.css']
+  styleUrls: ['../../assets/css/pages/auth-dark.css'],
+  providers: [AuthenticationService],
 })
 export class LoginComponent implements OnInit, OnDestroy, AfterViewInit {
 
-  constructor() { }
+  public user = new User('','');
+  public errorMsg = '';
+
+  constructor(
+      private _service:AuthenticationService) {}
+
+  login() {
+      if(!this._service.login(this.user)){
+          this.errorMsg = 'Failed to login';
+      }
+  }
+
 
   ngAfterViewInit() {
     $('#login-form').validate({
@@ -24,10 +38,10 @@ export class LoginComponent implements OnInit, OnDestroy, AfterViewInit {
     });
   }
   ngOnInit(): void {
-      $('body').css({'background-color':'#2CC4CB', 'background-image':'linear-gradient(135deg,#2CC4CB,#18C5A9)'});
+      $('body').addClass('bg-silver');
   }
   ngOnDestroy() { 
-      $('body').css({'background-color':'', 'background-image':''});
+      $('body').removeClass('bg-silver');
   }
 
 }

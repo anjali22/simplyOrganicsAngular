@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule }   from '@angular/http';
 
 import { AdminComponent } from './admin.component';
@@ -23,6 +24,7 @@ import {
   AppSidebar,
   AppThemeConfig,
   SessionModal
+  
 } from './components';
 
 const APP_COMPONENTS = [
@@ -35,18 +37,25 @@ const APP_COMPONENTS = [
 
 // Import routing module
 import { AppRoutingModule } from './admin.routing';
+//import { CustomerEditComponent } from './pages/customer-edit/customer-edit.component';
 
 @NgModule({
   declarations: [
     AdminComponent,
     ...APP_LAYOUTS,
     ...APP_COMPONENTS,
+    //CustomerEditComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+  ],
+  exports: [
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AdminComponent]

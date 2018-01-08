@@ -1,7 +1,8 @@
 import { Input, Component, ViewChild, ElementRef, OnInit, AfterViewInit } from '@angular/core';
 import {Router, ActivatedRoute, NavigationStart, NavigationEnd, NavigationCancel, NavigationError, RouterModule } from '@angular/router';
 import { Response} from '@angular/http';
-
+import { FormsModule }   from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import {UIService} from './services/ui.service';
 
 @Component({
