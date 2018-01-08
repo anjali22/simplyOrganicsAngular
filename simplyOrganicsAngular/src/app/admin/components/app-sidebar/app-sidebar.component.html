@@ -1,27 +1,43 @@
 <div id="sidebar-collapse">
   <ul class="side-menu">
-      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-        <a href="javascript:;">
-          <i class="sidebar-item-icon ti-home"></i>
-          <span class="nav-label">Dashboards</span>
-        </a>
+      
+     <!--  Dashboard -->
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/admin/home"><i class="sidebar-item-icon ti-home"></i><span class="nav-label">Dashboard</span></a></li>
+      
+      <!--  Customers -->
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a href="javascript:;"><i class="sidebar-item-icon ti-bar-chart"></i><span class="nav-label">Customers</span></a>
         <div class="nav-2-level">
           <ul>
-            <li><a routerLink="/admin/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Dashboard v1</a>
+            <li><a routerLink="/admin/customer_edit" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">View</a>
             </li>
-            <li><a routerLink="/admin/dashboard_2" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Dashboard v2</a>
+            <li><a routerLink="/admin/charts-morris" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Add Customer</a>
             </li>
-            <li><a routerLink="/admin/dashboard_3" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Dashboard v3</a>
+            <li><a routerLink="/admin/charts-peity" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Peity Charts</a>
             </li>
-            <li><a routerLink="/admin/dashboard_4" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Dashboard v4</a>
-            </li>
-            <li><a routerLink="/admin/dashboard_5" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Dashboard v5</a>
+            <li><a routerLink="/admin/charts-sparkline" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Sparkline Charts</a>
             </li>
           </ul>
         </div>
       </li>
-      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/admin/datatable"><i class="sidebar-item-icon ti-layers-alt"></i><span class="nav-label">Datatables</span></a></li>
-      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a href="javascript:;"><i class="sidebar-item-icon ti-bar-chart"></i><span class="nav-label">Charts</span></a>
+     
+       <!--  Salespeople -->
+       <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a href="javascript:;"><i class="sidebar-item-icon ti-bar-chart"></i><span class="nav-label">Salespeople</span></a>
+        <div class="nav-2-level">
+          <ul>
+            <li><a routerLink="/admin/chartjs" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">View</a>
+            </li>
+            <li><a routerLink="/admin/charts-morris" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"> Add Salesperson</a>
+            </li>
+            <li><a routerLink="/admin/charts-peity" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Peity Charts</a>
+            </li>
+            <li><a routerLink="/admin/charts-sparkline" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Sparkline Charts</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+       <!--  Products -->
+       <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a href="javascript:;"><i class="sidebar-item-icon ti-bar-chart"></i><span class="nav-label">Products</span></a>
         <div class="nav-2-level">
           <ul>
             <li><a routerLink="/admin/chartjs" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Chart.js</a>
@@ -35,88 +51,71 @@
           </ul>
         </div>
       </li>
-      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/admin/widgets"><i class="sidebar-item-icon ti-layers-alt"></i><span class="nav-label">Widgets</span></a></li>
-      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/admin/icons"><i class="sidebar-item-icon ti-face-smile"></i><span class="nav-label">Icons</span></a></li>
-      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a href="javascript:;"><i class="sidebar-item-icon ti-email"></i><span class="nav-label">Mailbox</span></a>
+
+       <!--  Locations -->
+       <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a href="javascript:;"><i class="sidebar-item-icon ti-bar-chart"></i><span class="nav-label">Locations</span></a>
         <div class="nav-2-level">
           <ul>
-            <li><a routerLink="/admin/mailbox" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Inbox</a>
+            <li><a routerLink="/admin/chartjs" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Chart.js</a>
             </li>
-            <li><a routerLink="/admin/mail_view" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Mail view</a>
+            <li><a routerLink="/admin/charts-morris" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Morris Charts</a>
             </li>
-            <li><a routerLink="/admin/mail_compose" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Compose mail</a>
+            <li><a routerLink="/admin/charts-peity" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Peity Charts</a>
+            </li>
+            <li><a routerLink="/admin/charts-sparkline" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Sparkline Charts</a>
             </li>
           </ul>
         </div>
       </li>
-      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a href="javascript:;"><i class="sidebar-item-icon ti-pencil"></i><span class="nav-label">Blog</span></a>
+     
+      <!--  Orders -->
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a href="javascript:;"><i class="sidebar-item-icon ti-bar-chart"></i><span class="nav-label">Orders</span></a>
         <div class="nav-2-level">
           <ul>
-            <li><a routerLink="/admin/blog" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">List</a>
+            <li><a routerLink="/admin/chartjs" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Chart.js</a>
             </li>
-            <li><a routerLink="/admin/article" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Article</a>
+            <li><a routerLink="/admin/charts-morris" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Morris Charts</a>
+            </li>
+            <li><a routerLink="/admin/charts-peity" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Peity Charts</a>
+            </li>
+            <li><a routerLink="/admin/charts-sparkline" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Sparkline Charts</a>
             </li>
           </ul>
         </div>
       </li>
-      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a href="javascript:;"><i class="sidebar-item-icon ti-shopping-cart"></i><span class="nav-label">E-Commerce</span></a>
+
+      <!--  Inventory -->
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a href="javascript:;"><i class="sidebar-item-icon ti-bar-chart"></i><span class="nav-label">Inventory</span></a>
         <div class="nav-2-level">
           <ul>
-            <li><a routerLink="/admin/ecommerce_products_board" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Products board</a>
+            <li><a routerLink="/admin/chartjs" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Chart.js</a>
             </li>
-            <li><a routerLink="/admin/ecommerce_products_list" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Products list</a>
+            <li><a routerLink="/admin/charts-morris" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Morris Charts</a>
             </li>
-            <li><a routerLink="/admin/ecommerce_products_edit" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Product edit</a>
+            <li><a routerLink="/admin/charts-peity" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Peity Charts</a>
+            </li>
+            <li><a routerLink="/admin/charts-sparkline" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Sparkline Charts</a>
             </li>
           </ul>
         </div>
       </li>
-      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a href="javascript:;"><i class="sidebar-item-icon ti-files"></i><span class="nav-label">Pages</span></a>
+     
+      <!--  Adminstrators -->
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a href="javascript:;"><i class="sidebar-item-icon ti-bar-chart"></i><span class="nav-label">Administrators</span></a>
         <div class="nav-2-level">
           <ul>
-            <li><a routerLink="/admin/invoice" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Invoice</a>
+            <li><a routerLink="/admin/chartjs" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Chart.js</a>
             </li>
-            <li><a routerLink="/admin/timeline" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Timeline</a>
+            <li><a routerLink="/admin/charts-morris" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Morris Charts</a>
             </li>
-            <li><a routerLink="/admin/faq" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">FAQ</a>
+            <li><a routerLink="/admin/charts-peity" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Peity Charts</a>
             </li>
-            <li><a routerLink="/admin/search" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Search</a>
-            </li>
-            <li><a routerLink="/admin/profile" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Profile</a>
-            </li>
-            <li><a routerLink="/admin/login" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Login</a>
-            </li>
-            <li><a routerLink="/admin/login_dark" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Login dark</a>
-            </li>
-            <li><a routerLink="/admin/register" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Register</a>
-            </li>
-            <li><a routerLink="/admin/register_dark" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Register dark</a>
-            </li>
-            <li><a routerLink="/admin/lockscreen" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Lockscreen</a>
-            </li>
-            <li><a routerLink="/admin/forgot_password" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Forgot password</a>
-            </li>
-            <li><a routerLink="/admin/error_404" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">404 error</a>
-            </li>
-            <li><a routerLink="/admin/error_500" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">500 error</a>
+            <li><a routerLink="/admin/charts-sparkline" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Sparkline Charts</a>
             </li>
           </ul>
         </div>
       </li>
-      <li><a href="javascript:;"><i class="sidebar-item-icon ti-anchor"></i><span class="nav-label">Menu Levels</span></a>
-        <div class="nav-2-level">
-          <ul>
-            <li><a href="javascript:;">Level 2</a>
-            </li>
-            <li><a href="javascript:;">Level 2</a>
-              <ul class="nav-3-level">
-                <li><a href="javascript:;">Level 3</a></li>
-                <li><a href="javascript:;">Level 3</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </li>
+
   </ul>
 </div>
 

@@ -1,10 +1,10 @@
 import { Input, Component, ElementRef, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
-  selector: 'home-app',
-  templateUrl: './home.component.html',
+  selector: 'adminhome-app',
+  templateUrl: './adminhome.component.html',
 })
-export class HomeComponent implements AfterViewInit {
+export class AdminHomeComponent implements AfterViewInit {
   constructor(private elementRef: ElementRef) { }
   
     ngAfterViewInit(): void {

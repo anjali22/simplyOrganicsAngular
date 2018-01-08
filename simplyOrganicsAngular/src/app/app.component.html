@@ -19,6 +19,13 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul> -->
+<ul class="nav navbar-nav">
+    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+    <li><a routerLink="/about" routerLinkActive="active" >About</a></li>
+    <li><a routerLink="/contact" routerLinkActive="active" >Contact</a></li>
+    <li><a routerLink="/login" routerLinkActive="active" >Login</a></li>
+    
+  </ul>
 
 <div class="preloader-backdrop" *ngIf="loading">
   <div class="page-preloader">Loading</div>
