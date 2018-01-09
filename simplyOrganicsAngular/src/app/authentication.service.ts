@@ -5,12 +5,15 @@ import {Router} from '@angular/router';
 export class User {
   constructor(
     public email: string,
-    public password: string) { }
+    public password: string,
+    public role: string) { }
 }
 
 var users = [
-  new User('admin@admin.com','anjali'),
-  new User('user1@gmail.com','a23')
+  new User('admin@admin.com','12345','admin'),
+  new User('customer@gmail.com','12345','customer'),
+  new User('salesperon@gmail.com','12345','salesperson'),
+  
 ];
 
 @Injectable()
