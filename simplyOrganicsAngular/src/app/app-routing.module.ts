@@ -43,6 +43,12 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent} from './login/login.component';
+import {CustomerDetailComponent} from './customer-detail/customer-detail.component';
+import {CustomerListComponent} from './customer-list/customer-list.component';
+import {ProductDetailComponent} from './product-detail/product-detail.component';
+import {ProductEditComponent} from './product-edit/product-edit.component';
+import {ProductListComponent} from './product-list/product-list.component';
+import {AdminDashboardComponent} from './admin-dashboard/admin-dashboard.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -52,11 +58,19 @@ const appRoutes: Routes = [
   {path: 'admin', component: FullLayout, 
     children: [
       {path: '', component: AdminHomeComponent },
+      {path: 'dashboard', component: AdminDashboardComponent},
+      {path: 'customerlist', component: CustomerListComponent},
+      {path: 'customeredit', component: CustomerEditComponent},
+      {path: 'customerdetail/:userid', component: CustomerDetailComponent},
+      {path: 'productlist', component: ProductListComponent},
+      {path: 'productedit', component: ProductEditComponent},
+      {path: 'productdetail/:productid', component: ProductDetailComponent},
+
+
       { path: 'dashboard_2', component: Dashboard2Component},
       { path: 'dashboard_3', component: Dashboard3Component},
       { path: 'dashboard_4', component: Dashboard4Component},
       { path: 'dashboard_5', component: Dashboard5Component},
-      { path: 'customer_edit', component: CustomerEditComponent},
       { path: 'datatable', component: Datatable},
       { path: 'chartjs', component: ChartJS},
       { path: 'charts-peity', component: Peity},

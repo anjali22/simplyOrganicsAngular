@@ -13,7 +13,7 @@ declare var $:any;
 })
 export class LoginComponent implements OnInit, OnDestroy, AfterViewInit {
 
-  public user = new User('','');
+  public user = new User('','','');
   public errorMsg = '';
 
   constructor(
