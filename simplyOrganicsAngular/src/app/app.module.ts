@@ -4,6 +4,7 @@ import { Router, Routes, RouterModule } from '@angular/router'
 import { HttpModule }   from '@angular/http';
 import { FormsModule }   from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AdminComponent } from './admin/admin.component';
@@ -21,6 +22,10 @@ import { CustomerDetailComponent } from './customer-detail/customer-detail.compo
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ColumnComponent } from './product-list/column.component';
+import { DatatableComponent } from './product-list/datatable.component';
+import { InventoryComponent } from './inventory/inventory.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +42,10 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ProductListComponent,
     ProductEditComponent,
     ProductDetailComponent,
+    DatatableComponent,
+    ColumnComponent,
+    InventoryComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -45,7 +54,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     //appRoutes,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   exports: [
     FormsModule,

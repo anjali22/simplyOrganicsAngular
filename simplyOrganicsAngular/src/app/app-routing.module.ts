@@ -49,6 +49,7 @@ import {ProductDetailComponent} from './product-detail/product-detail.component'
 import {ProductEditComponent} from './product-edit/product-edit.component';
 import {ProductListComponent} from './product-list/product-list.component';
 import {AdminDashboardComponent} from './admin-dashboard/admin-dashboard.component';
+import {InventoryComponent} from './inventory/inventory.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -65,7 +66,7 @@ const appRoutes: Routes = [
       {path: 'productlist', component: ProductListComponent},
       {path: 'productedit', component: ProductEditComponent},
       {path: 'productdetail/:productid', component: ProductDetailComponent},
-
+      {path: 'inventory', component: InventoryComponent},
 
       { path: 'dashboard_2', component: Dashboard2Component},
       { path: 'dashboard_3', component: Dashboard3Component},
