@@ -1,15 +1,59 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup,ReactiveFormsModule, Validators, FormBuilder } from '@angular/forms';
+//import {Hero} from '../../../models/product.model';
+import {Product} from '../product.interface';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import { RequestOptions } from '@angular/http';
 
 @Component({
   selector: 'app-product-edit',
   templateUrl: './product-edit.component.html',
   styleUrls: ['./product-edit.component.css']
 })
-export class ProductEditComponent implements OnInit {
+export class ProductEditComponent implements OnInit{
 
-  constructor() { }
 
+  public myForm: FormGroup; // our model driven form
+  public submitted: boolean; // keep track on whether form is submitted
+  public events: any[] = []; // use later to display form changes
+
+  constructor(private _fb: FormBuilder, private http: HttpClient) { } // form builder simplify form initialization
+  results: object[];
+  
   ngOnInit() {
+      // the short way
+    this.myForm = this._fb.group({
+      title: ['', [<any>Validators.required, <any>Validators.minLength(5)]],
+      price: [''] ,
+  });
   }
+
+  save(model: Product, isValid: boolean) {
+
+    console.log(model, isValid);
+    this.submitted = true; // set form submit to true
+    
+    var body = "title=" + model.title + "&price=" + model.price ;
+    console.log("body-----", body);
+    var bodySt = JSON.stringify(body);
+    console.log("body-----", bodySt);
+    
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+
+    this.http
+      .post('http://localhost:3000/productedit',
+        body, {
+          headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')
+        })
+        .subscribe(data => {
+              alert('ok');
+        }, error => {
+            console.log(error);
+        });
+
+     
+     
+    }
 
 }
