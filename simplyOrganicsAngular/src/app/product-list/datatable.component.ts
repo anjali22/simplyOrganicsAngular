@@ -1,7 +1,8 @@
 import {Http, Response} from '@angular/http';
 import {Injectable, Component, Input} from '@angular/core';
 import {ColumnComponent} from './column.component';
- 
+import {Router} from '@angular/router';
+
 @Component({
   selector: 'datatable',
   template: `<div class="page-content fade-in-up">
@@ -18,7 +19,7 @@ import {ColumnComponent} from './column.component';
             <tr>
                   <td *ngFor="let column of columns">{{row[column.value]}}</td>
                   <td>
-                  <button class="btn btn-default btn-sm btn-flat" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil font-14"></i></button>
+                  <button (click)="details(row)" class="btn btn-default btn-sm btn-flat" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil font-14"></i></button>
                   <button class="btn btn-default btn-sm btn-flat" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash font-14"></i></button>
                 </td>
             </tr>
@@ -28,14 +29,22 @@ import {ColumnComponent} from './column.component';
 </div>
 </div>
 </div>
- `
+ `,
+ 
 })
 export class DatatableComponent { 
  
   @Input() dataset;
   columns: ColumnComponent[] = [];
  
+  constructor(private router: Router) { }
+
   addColumn(column){
     this.columns.push(column);
+  }
+
+  details(value){
+    console.log("details called", value.p_id);
+    this.router.navigate(['/admin/productdetail',value.p_id]);
   }
 }

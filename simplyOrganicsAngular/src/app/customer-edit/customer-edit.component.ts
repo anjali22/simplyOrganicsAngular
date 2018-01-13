@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup,ReactiveFormsModule, Validators, FormBuilder } from '@angular/forms';
 //import {Hero} from '../../../models/product.model';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import { RequestOptions } from '@angular/http';
+import {Customer} from '../customer.interface';
 
 @Component({
   selector: 'app-customer-edit',
@@ -10,18 +13,48 @@ import { FormControl, FormGroup,ReactiveFormsModule, Validators, FormBuilder } f
 export class CustomerEditComponent {
 
 
-form: FormGroup;
-
-firstName = new FormControl("", Validators.required);
-
-constructor(fb: FormBuilder) {
-    this.form = fb.group({
-        "firstName": this.firstName,
-        "password":["", Validators.required]
+    public myForm: FormGroup; // our model driven form
+    public submitted: boolean; // keep track on whether form is submitted
+    public events: any[] = []; // use later to display form changes
+  
+    constructor(private _fb: FormBuilder, private http: HttpClient) { } // form builder simplify form initialization
+    results: object[];
+    
+    ngOnInit() {
+        // the short way
+      this.myForm = this._fb.group({
+        first_name: ['', [<any>Validators.required, <any>Validators.minLength(5)]],
+        last_name: [''] ,
     });
-}
-onSubmitModelBased() {
-    console.log("model-based form submitted");
-    console.log(this.form);
-}
-}
+    }
+  
+    save(model: Customer, isValid: boolean) {
+  
+      console.log(model, isValid);
+      this.submitted = true; // set form submit to true
+      
+      var body = "fname=" + model.first_name + "&lname=" + model.last_name ;
+      console.log("body-----", body);
+      var bodySt = JSON.stringify(body);
+      console.log("body-----", bodySt);
+      
+      var headers = new Headers();
+      headers.append('Content-Type', 'application/x-www-form-urlencoded');
+  
+      this.http
+        .post('http://localhost:3000/customeradd',
+          body, {
+            headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')
+          })
+          .subscribe(data => {
+                alert('ok');
+          }, error => {
+              console.log(error);
+          });
+  
+       
+       
+      }
+  
+  }
+  

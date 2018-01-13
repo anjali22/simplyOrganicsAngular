@@ -10,6 +10,9 @@ declare var $:any;
                   <column [value]="'p_id'" [header]="'Id'"></column>
                   <column [value]="'p_title'" [header]="'Name'"></column>
                   <column [value]="'p_quant'" [header]="'Quantity'"></column>
+                  <column [value]="'p_quant_warehouse'" [header]="'Warehouse'"></column>
+                  <column [value]="'p_quant_van'" [header]="'Van'"></column>
+                  <column [value]="'p_quant_store'" [header]="'Store'"></column>
                   
              </datatable>
              `,
