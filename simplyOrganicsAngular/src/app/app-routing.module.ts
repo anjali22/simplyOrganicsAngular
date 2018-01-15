@@ -50,24 +50,27 @@ import {ProductEditComponent} from './product-edit/product-edit.component';
 import {ProductListComponent} from './product-list/product-list.component';
 import {AdminDashboardComponent} from './admin-dashboard/admin-dashboard.component';
 import {InventoryComponent} from './inventory/inventory.component';
+import {SalespersonListComponent} from './salesperson-list/salesperson-list.component';
+import {SalespersonEditComponent} from './salesperson-edit/salesperson-edit.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent},
-  {path: 'admin', component: FullLayout, 
+  { path: 'admin', component: FullLayout, 
     children: [
-      {path: '', component: AdminHomeComponent },
-      {path: 'dashboard', component: AdminDashboardComponent},
-      {path: 'customerlist', component: CustomerListComponent},
-      {path: 'customeredit', component: CustomerEditComponent},
-      {path: 'customerdetail/:userid', component: CustomerDetailComponent},
-      {path: 'productlist', component: ProductListComponent},
-      {path: 'productedit', component: ProductEditComponent},
-      {path: 'productdetail/:productid', component: ProductDetailComponent},
-      {path: 'inventory', component: InventoryComponent},
-
+      { path: '', component: AdminHomeComponent },
+      { path: 'dashboard', component: AdminDashboardComponent},
+      { path: 'customerlist', component: CustomerListComponent},
+      { path: 'customeredit', component: CustomerEditComponent},
+      { path: 'customerdetail/:userid', component: CustomerDetailComponent},
+      { path: 'productlist', component: ProductListComponent},
+      { path: 'productedit', component: ProductEditComponent},
+      { path: 'productdetail/:productid', component: ProductDetailComponent},
+      { path: 'inventory', component: InventoryComponent},
+      { path: 'salespersonlist', component: SalespersonListComponent},
+      { path: 'salespersonedit', component: SalespersonEditComponent},      
       { path: 'dashboard_2', component: Dashboard2Component},
       { path: 'dashboard_3', component: Dashboard3Component},
       { path: 'dashboard_4', component: Dashboard4Component},
@@ -140,6 +143,7 @@ const appRoutes: Routes = [
     AppHeader,
     SessionModal,
     AppThemeConfig,
+   
     //CustomerEditComponent,
   ]
 })
