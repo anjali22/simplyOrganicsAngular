@@ -25,8 +25,13 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ColumnComponent } from './product-list/column.component';
 import { DatatableComponent } from './product-list/datatable.component';
 import { InventoryComponent } from './inventory/inventory.component';
+
 import { SalespersonListComponent } from './salesperson-list/salesperson-list.component';
 import { SalespersonEditComponent } from './salesperson-edit/salesperson-edit.component';
+
+import { CustomerColumnComponent } from "./customer-list/customer-column.component";
+import { CustomerDatatableComponent } from "./customer-list/customer-datatable.component";
+
 
 @NgModule({
   declarations: [
@@ -47,8 +52,13 @@ import { SalespersonEditComponent } from './salesperson-edit/salesperson-edit.co
     DatatableComponent,
     ColumnComponent,
     InventoryComponent,
+
     SalespersonListComponent,
     SalespersonEditComponent,
+
+    CustomerColumnComponent,
+    CustomerDatatableComponent
+
 
   ],
   imports: [
