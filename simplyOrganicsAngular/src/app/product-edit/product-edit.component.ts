@@ -33,7 +33,7 @@ export class ProductEditComponent implements OnInit{
     console.log(model, isValid);
     this.submitted = true; // set form submit to true
     
-    var body = "title=" + model.title + "&price=" + model.price ;
+    var body = "title=" + model.name + "&price=" + model.price ;
     console.log("body-----", body);
     var bodySt = JSON.stringify(body);
     console.log("body-----", bodySt);
