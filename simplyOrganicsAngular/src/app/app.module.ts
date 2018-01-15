@@ -25,6 +25,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ColumnComponent } from './product-list/column.component';
 import { DatatableComponent } from './product-list/datatable.component';
 import { InventoryComponent } from './inventory/inventory.component';
+import { CustomerColumnComponent } from "./customer-list/customer-column.component";
+import { CustomerDatatableComponent } from "./customer-list/customer-datatable.component";
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { InventoryComponent } from './inventory/inventory.component';
     DatatableComponent,
     ColumnComponent,
     InventoryComponent,
+    CustomerColumnComponent,
+    CustomerDatatableComponent
 
   ],
   imports: [

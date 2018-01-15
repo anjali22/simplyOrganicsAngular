@@ -1,3 +1,29 @@
-<p>
-  customer-detail works!
-</p>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">    
+    <label class="fontstyle1"><span class="fontstyle2">STEP2. </span>User Information</label>
+       <div class="form-group">
+          <label for="customerNameInput">Customer Name</label>  
+          <input type="text"  
+                 id="customerNameInput"  
+                 placeholder="customer Name"  
+                 formControlName="customerName"
+          >
+       </div>
+       <div class="ui info message">  
+          The product name is: {{customerName}}  
+        </div>
+ 
+       <!-- <div class="form-group">
+          <label class="fontstyle3">E-mail</label>
+          <input *ngFor="let result of results" type="text" required class="form-control" [(ngModel)]="result.email" disabled>
+       </div>
+ 
+       <div class="form-group">
+          <label class="fontstyle3">Role</label>
+          <input *ngFor="let result of results" type="text" required class="form-control" [(ngModel)]="result.role" disabled>
+       </div>    
+       <br>     -->
+       <button type="submit" id="request-btn">Request</button>   
+    
+  </div>
+</form>
