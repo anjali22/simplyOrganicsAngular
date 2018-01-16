@@ -5,7 +5,7 @@ declare var jQuery:any;
 declare var $:any;
 
 @Component({
-  selector: '[app-header]',
+  selector: '[admin-header]',
   templateUrl: './app-header.component.html',
   providers: [UIService]
 })

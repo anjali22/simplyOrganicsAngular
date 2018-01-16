@@ -31,6 +31,7 @@ import { SalespersonEditComponent } from './salesperson-edit/salesperson-edit.co
 
 import { CustomerColumnComponent } from "./customer-list/customer-column.component";
 import { CustomerDatatableComponent } from "./customer-list/customer-datatable.component";
+import { AppHeaderComponent } from './app-header/app-header.component';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { CustomerDatatableComponent } from "./customer-list/customer-datatable.c
     SalespersonEditComponent,
 
     CustomerColumnComponent,
-    CustomerDatatableComponent
+    CustomerDatatableComponent,
+    AppHeaderComponent
 
 
   ],
