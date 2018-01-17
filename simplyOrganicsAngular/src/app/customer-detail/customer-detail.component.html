@@ -1,17 +1,81 @@
-<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="myForm" novalidate (ngSubmit)="update(myForm.value, myForm.valid)">
   <div class="form-group">    
     <label class="fontstyle1"><span class="fontstyle2">STEP2. </span>User Information</label>
        <div class="form-group">
-          <label for="customerNameInput">Customer Name</label>  
+          <label for="customerNameInput">First Name</label>  
           <input type="text"  
                  id="customerNameInput"  
                  placeholder="customer Name"  
-                 formControlName="customerName"
+                 formControlName="f_name"
+          >
+          <label for="customerNameInput">Last Name</label>  
+          <input type="text"  
+                 id="customerNameInput"  
+                 placeholder="customer Name"  
+                 formControlName="l_name"
+          >
+          <label for="customerNameInput">Email</label>  
+          <input type="text"  
+                 id="customerNameInput"  
+                 placeholder="customer Name"  
+                 formControlName="email"
+          >
+          <label for="customerNameInput">Contact</label>  
+          <input type="text"  
+                 id="customerNameInput"  
+                 placeholder="customer Name"  
+                 formControlName="contact"
+          >
+          <label for="customerNameInput">Address</label>  
+          <input type="text"  
+                 id="customerNameInput"  
+                 placeholder="customer Name"  
+                 formControlName="address"
+          >
+          <label for="customerNameInput">Landmark</label>  
+          <input type="text"  
+                 id="customerNameInput"  
+                 placeholder="customer Name"  
+                 formControlName="landmark"
+          >
+          <label for="customerNameInput">Pin Code</label>  
+          <input type="text"  
+                 id="customerNameInput"  
+                 placeholder="customer Name"  
+                 formControlName="pincode"
+          >
+          <label for="customerNameInput">City</label>  
+          <input type="text"  
+                 id="customerNameInput"  
+                 placeholder="customer Name"  
+                 formControlName="city_name"
+          >
+          <label for="customerNameInput">State</label>  
+          <input type="text"  
+                 id="customerNameInput"  
+                 placeholder="customer Name"  
+                 formControlName="state_name"
+          >
+          <label for="customerNameInput">Country</label>  
+          <input type="text"  
+                 id="customerNameInput"  
+                 placeholder="customer Name"  
+                 formControlName="country_name"
+          >
+          <label for="customerNameInput">Date Added</label>  
+          <input type="text"  
+                 id="customerNameInput"  
+                 placeholder="customer Name"  
+                 formControlName="dateAdded"
+          >
+          <label for="customerNameInput">Added By</label>  
+          <input type="text"  
+                 id="customerNameInput"  
+                 placeholder="customer Name"  
+                 formControlName="addedBy"
           >
        </div>
-       <div class="ui info message">  
-          The product name is: {{customerName}}  
-        </div>
+       
  
        <!-- <div class="form-group">
           <label class="fontstyle3">E-mail</label>
@@ -23,7 +87,7 @@
           <input *ngFor="let result of results" type="text" required class="form-control" [(ngModel)]="result.role" disabled>
        </div>    
        <br>     -->
-       <button type="submit" id="request-btn">Request</button>   
+       <button type="submit" id="request-btn">Update</button>   
     
   </div>
 </form>

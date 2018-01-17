@@ -1,4 +1,15 @@
 export class Customer {
-    id: number;
-    first_name: string;
+    user_id: number;
+    f_name: string;
+    l_name: string;
+    addedBy: string;
+    address: string;
+    city_name: string;
+    contact: string;
+    country_name: string;
+    dateAdded: string;
+    email: string;
+    landmark: string;
+    pincode: string;
+    state_name: string;
   }
