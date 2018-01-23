@@ -31,7 +31,15 @@ import { SalespersonEditComponent } from './salesperson-edit/salesperson-edit.co
 
 import { CustomerColumnComponent } from "./customer-list/customer-column.component";
 import { CustomerDatatableComponent } from "./customer-list/customer-datatable.component";
+
+import { StoreViewComponent } from './store-view/store-view.component';
+import { StoreEditComponent } from './store-edit/store-edit.component';
+import {MeasureService} from './measure.service';
+import {MessageService} from './message.service';
+import {CurrencyService} from './currency.service';
+
 import { AppHeaderComponent } from './app-header/app-header.component';
+
 
 
 @NgModule({
@@ -59,7 +67,11 @@ import { AppHeaderComponent } from './app-header/app-header.component';
 
     CustomerColumnComponent,
     CustomerDatatableComponent,
+
+    StoreViewComponent,
+    StoreEditComponent
     AppHeaderComponent
+
 
 
   ],
@@ -77,7 +89,7 @@ import { AppHeaderComponent } from './app-header/app-header.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [MeasureService, MessageService, CurrencyService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

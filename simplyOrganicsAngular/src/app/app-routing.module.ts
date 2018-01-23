@@ -52,6 +52,8 @@ import {AdminDashboardComponent} from './admin-dashboard/admin-dashboard.compone
 import {InventoryComponent} from './inventory/inventory.component';
 import {SalespersonListComponent} from './salesperson-list/salesperson-list.component';
 import {SalespersonEditComponent} from './salesperson-edit/salesperson-edit.component';
+import {StoreEditComponent} from './store-edit/store-edit.component';
+import {StoreViewComponent} from './store-view/store-view.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -69,6 +71,8 @@ const appRoutes: Routes = [
       { path: 'productedit', component: ProductEditComponent},
       { path: 'productdetail/:productid', component: ProductDetailComponent},
       { path: 'inventory', component: InventoryComponent},
+      { path: 'storeview', component: StoreViewComponent},
+      { path: 'storeedit', component: StoreEditComponent},
       { path: 'salespersonlist', component: SalespersonListComponent},
       { path: 'salespersonedit', component: SalespersonEditComponent},      
       { path: 'dashboard_2', component: Dashboard2Component},
