@@ -7,12 +7,17 @@ declare var $:any;
 @Component({
  // templateUrl: './product-list.component.html',
  template: `<datatable [dataset]=results>
-                  <column [value]="'p_id'" [header]="'Id'"></column>
-                  <column [value]="'p_title'" [header]="'Name'"></column>
-                  <column [value]="'p_quant'" [header]="'Quantity'"></column>
-                  <column [value]="'p_quant_warehouse'" [header]="'Warehouse'"></column>
-                  <column [value]="'p_quant_van'" [header]="'Van'"></column>
-                  <column [value]="'p_quant_store'" [header]="'Store'"></column>
+                  <column [value]="'prod_id'" [header]="'Id'"></column>
+                  <column [value]="'prod_name'" [header]="'Name'"></column>
+                  <column [value]="'quant'" [header]="'Quantity'"></column>
+                  <column [value]="'p_cat'" [header]="'Category'"></column> 
+                  <column [value]="'prod_measure'" [header]="'Measure'"></column>
+                  <column [value]="'price_rupee'" [header]="'Rupees'"></column>
+                  <column [value]="'price_dirham'" [header]="'Dirham'"></column>
+                  <column [value]="'price_dollar'" [header]="'Dollar'"></column>                  
+                  <column [value]="'warehouse'" [header]="'Warehouse'"></column>
+                  <column [value]="'van'" [header]="'Van'"></column>
+                  <column [value]="'store'" [header]="'Store'"></column>
                   
              </datatable>
              `,
