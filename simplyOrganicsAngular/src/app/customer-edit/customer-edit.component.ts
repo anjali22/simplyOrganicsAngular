@@ -3,7 +3,8 @@ import { FormControl, FormGroup,ReactiveFormsModule, Validators, FormBuilder } f
 //import {Hero} from '../../../models/product.model';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { RequestOptions } from '@angular/http';
-import {Customer} from '../customer.interface';
+//import {Customer} from '../customer.interface';
+import { Customer } from "../customer.interface";
 
 @Component({
   selector: 'app-customer-edit',

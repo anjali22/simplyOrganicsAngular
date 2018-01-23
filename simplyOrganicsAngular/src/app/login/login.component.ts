@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import {ElementRef} from '@angular/core';
-import {AuthenticationService, User} from '../authentication.service'
+import {AuthenticationService, User} from '../authentication.service';
+
 
 declare var jQuery:any;
 declare var $:any;
