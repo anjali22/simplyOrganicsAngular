@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { catchError, map, tap } from 'rxjs/operators';
 import { MessageService } from './message.service';
-import { Currency } from './currency';
+import { Currency } from './models/currency';
 //import { MessageService } from './message.service';
 
 const httpOptions = {

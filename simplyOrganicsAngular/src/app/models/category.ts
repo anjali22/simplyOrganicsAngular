@@ -1,4 +1,4 @@
-export class Category{
+export class Category {
     cat_id: number;
     cat_name: string;
     cat_status: string;

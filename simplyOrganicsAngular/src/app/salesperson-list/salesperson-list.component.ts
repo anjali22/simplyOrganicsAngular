@@ -6,13 +6,13 @@ declare var $:any;
 
 @Component({
  // templateUrl: './product-list.component.html',
- template: `<customer-datatable [dataset]=results>
- <customer-column [value]="'user_id'" [header]="'Id'"></customer-column>
- <customer-column [value]="'f_name'" [header]="'Fisrt Name'"></customer-column>
- <customer-column [value]="'l_name'" [header]="'Last Name'"></customer-column>
- <customer-column [value]="'email'" [header]="'Email'"></customer-column>
+ template: `<salesperson-datatable [dataset]=results>
+ <salesperson-column [value]="'user_id'" [header]="'Id'"></salesperson-column>
+ <salesperson-column [value]="'f_name'" [header]="'Fisrt Name'"></salesperson-column>
+ <salesperson-column [value]="'l_name'" [header]="'Last Name'"></salesperson-column>
+ <salesperson-column [value]="'email'" [header]="'Email'"></salesperson-column>
  
-</customer-datatable>
+</salesperson-datatable>
 `,
 })
 

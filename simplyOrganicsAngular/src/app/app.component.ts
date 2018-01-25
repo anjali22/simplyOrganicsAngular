@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Store} from '../app/store';
-import {Category} from '../app/category';
-import {City} from '../app/city';
-import {State} from '../app/state';
-import {Country} from '../app/country';
-import {Measure} from '../app/measure';
-import {Currency} from '../app/currency';
-import {Quantity} from '../app/quantity';
+import {Store} from '../app/models/store';
+import { Category } from '../app/models/category';
+import {City} from '../app/models/city';
+import {State} from '../app/models/state';
+import {Country} from '../app/models/country';
+import {Measure} from '../app/models/measure';
+import {Currency} from '../app/models/currency';
+import {Quantity} from '../app/models/quantity';
 
 @Component({
   selector: 'app-root',
@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     // Make the HTTP request:
-    this.http.get('http://localhost:3000/storeview').subscribe(data => {
+    /* this.http.get('http://localhost:3000/storeview').subscribe(data => {
       // Read the result field from the JSON response.
       this.stores = data['results'];
       console.log(this.stores);
@@ -87,7 +87,7 @@ export class AppComponent implements OnInit {
       // Read the result field from the JSON response.
       this.countries = data['results'];
       console.log(this.countries);
-    });
+    }); */
   }
   
 }

@@ -10,7 +10,6 @@ declare var $:any;
                   <customer-column [value]="'f_name'" [header]="'Fisrt Name'"></customer-column>
                   <customer-column [value]="'l_name'" [header]="'Last Name'"></customer-column>
                   <customer-column [value]="'email'" [header]="'Email'"></customer-column>
-                  
              </customer-datatable>
              `,
 })

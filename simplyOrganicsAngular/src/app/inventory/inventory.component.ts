@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup,ReactiveFormsModule, Validators, FormBuilder } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators, FormBuilder } from '@angular/forms';
 //import {Hero} from '../../../models/product.model';
 //import {Product} from '../product.interface';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
@@ -17,7 +17,7 @@ export class InventoryComponent implements OnInit {
 
   constructor(private _fb: FormBuilder, private http: HttpClient) { }
   results: object[];
-  
+
   ngOnInit() {
     this.inventoryForm = this._fb.group({
       productName: ['', [<any>Validators.required, <any>Validators.minLength(5)]],

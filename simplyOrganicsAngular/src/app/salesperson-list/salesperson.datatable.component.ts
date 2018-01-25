@@ -1,10 +1,10 @@
 import {Http, Response} from '@angular/http';
 import {Injectable, Component, Input} from '@angular/core';
-import {ColumnComponent} from './column.component';
+import {SalespersonColumnComponent} from './salesperson.column.component';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'datatable',
+  selector: 'salesperson-datatable',
   template: `<div class="page-content fade-in-up">
   <div class="ibox">
    <div class="ibox-body">
@@ -32,10 +32,10 @@ import {Router} from '@angular/router';
  `,
  
 })
-export class DatatableComponent { 
+export class SalespersonDatatableComponent { 
  
   @Input() dataset;
-  columns: ColumnComponent[] = [];
+  columns: SalespersonColumnComponent[] = [];
  
   constructor(private router: Router) { }
 

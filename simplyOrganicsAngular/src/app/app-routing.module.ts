@@ -27,7 +27,7 @@ import { TimelineComponent } from './admin/pages/timeline/timeline.component';
 import { FaqComponent } from './admin/pages/faq/faq.component';
 import { ProfileComponent } from './admin/pages/profile/profile.component';
 import { SearchComponent } from './admin/pages/search/search.component';
-//import { LoginComponent } from './admin/pages/login/login.component';
+// import { LoginComponent } from './admin/pages/login/login.component';
 import { LoginDarkComponent } from './admin/pages/login-dark/login-dark.component';
 import { RegisterComponent } from './admin/pages/register/register.component';
 import { RegisterDarkComponent } from './admin/pages/register-dark/register-dark.component';
@@ -36,22 +36,31 @@ import { LockscreenComponent } from './admin/pages/lockscreen/lockscreen.compone
 import { Error404Component } from './admin/pages/error-404/error-404.component';
 import { Error500Component } from './admin/pages/error-500/error-500.component';
 import { AppFooter, AppHeader, AppSidebar, AppThemeConfig, SessionModal} from './admin/components/index'
-//import {CustomerEditComponent} from './admin/pages/customer-edit/customer-edit.component';
+// import {CustomerEditComponent} from './admin/pages/customer-edit/customer-edit.component';
 import {CustomerEditComponent} from './customer-edit/customer-edit.component';
-import { adminRoutes } from './admin/admin.routing'
+import { adminRoutes } from './admin/admin.routing';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent} from './login/login.component';
+
 import {CustomerDetailComponent} from './customer-detail/customer-detail.component';
 import {CustomerListComponent} from './customer-list/customer-list.component';
+
 import {ProductDetailComponent} from './product-detail/product-detail.component';
 import {ProductEditComponent} from './product-edit/product-edit.component';
 import {ProductListComponent} from './product-list/product-list.component';
+
 import {AdminDashboardComponent} from './admin-dashboard/admin-dashboard.component';
+
 import {InventoryComponent} from './inventory/inventory.component';
+import { InventoryDetailComponent } from './inventory-detail/inventory-detail.component';
+import { InventoryEditComponent } from './inventory-edit/inventory-edit.component';
+import { InventoryListComponent } from './inventory-list/inventory-list.component';
+
 import {SalespersonListComponent} from './salesperson-list/salesperson-list.component';
 import {SalespersonEditComponent} from './salesperson-edit/salesperson-edit.component';
+
 import {StoreEditComponent} from './store-edit/store-edit.component';
 import {StoreViewComponent} from './store-view/store-view.component';
 
@@ -71,6 +80,9 @@ const appRoutes: Routes = [
       { path: 'productedit', component: ProductEditComponent},
       { path: 'productdetail/:productid', component: ProductDetailComponent},
       { path: 'inventory', component: InventoryComponent},
+      { path: 'inventorylist', component: InventoryListComponent},
+      { path: 'inventoryedit', component: InventoryEditComponent},
+      { path: 'inventorydetail/:inventoryid', component: InventoryDetailComponent},
       { path: 'storeview', component: StoreViewComponent},
       { path: 'storeedit', component: StoreEditComponent},
       { path: 'salespersonlist', component: SalespersonListComponent},
@@ -99,16 +111,16 @@ const appRoutes: Routes = [
       { path: 'faq', component: FaqComponent},
       { path: 'search', component: SearchComponent},
       { path: 'profile', component: ProfileComponent},
-    ]  
+    ]
 }
-  //{ path: 'login', component: FullLayout},
+  // { path: 'login', component: FullLayout},
   // children: [
   //   { path: '', component: AdminHomeComponent }, // url: about/
-    
+
   // ]
 
-  //{// path: '**', component: HomeComponent },
-  //...adminRoutes,
+  // {// path: '**', component: HomeComponent },
+  // ...adminRoutes,
 ];
 
 // const routes: Routes = [
@@ -125,7 +137,6 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes)
   ],
   exports: [ RouterModule ],
-  
   declarations: [
     FullLayout, SimpleLayout,
     AdminHomeComponent,
@@ -133,7 +144,6 @@ const appRoutes: Routes = [
     ChartJS, Peity, SparklineComponent, MorrisChartComponent, IconsComponent, WidgetsComponent,
     Mailbox, MailView, MailCompose, Blog, Article, EcommerceProdutsBoard, EcommerceProdutsList, EcommerceProdutsEdit, 
     InvoiceComponent, TimelineComponent, FaqComponent, ProfileComponent, SearchComponent,
-    
     LoginDarkComponent,
     RegisterComponent,
     RegisterDarkComponent,
@@ -147,8 +157,8 @@ const appRoutes: Routes = [
     AppHeader,
     SessionModal,
     AppThemeConfig,
-   
-    //CustomerEditComponent,
+
+    // CustomerEditComponent,
   ]
 })
 export class AppRoutingModule {}
