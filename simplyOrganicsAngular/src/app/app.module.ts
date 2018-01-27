@@ -55,6 +55,8 @@ import { InventoryDetailComponent } from './inventory-detail/inventory-detail.co
 import { InventoryEditComponent } from './inventory-edit/inventory-edit.component';
 import { InventoryDatatableComponent } from './inventory-list/inventory.datatable.component';
 import { InventoryColumnComponent} from './inventory-list/inventory.column.component';
+import { AppNavbarComponent } from './app-navbar/app-navbar.component';
+
 import { AppFooterComponent } from './app-footer/app-footer.component';
 import { AppHomeSliderComponent } from './app-home-slider/app-home-slider.component';
 import { AppServiceSectionComponent } from './app-service-section/app-service-section.component';
@@ -104,10 +106,14 @@ import { AppLatestNewsComponent } from './app-latest-news/app-latest-news.compon
     InventoryColumnComponent,
     InventoryDatatableComponent,
     SalespersonDetailComponent,
+    AppNavbarComponent,
+
+
     AppFooterComponent,
     AppHomeSliderComponent,
     AppServiceSectionComponent,
     AppLatestNewsComponent,
+
 
   ],
   imports: [

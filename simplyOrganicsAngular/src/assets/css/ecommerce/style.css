@@ -272,7 +272,7 @@ input:focus {
 	outline: none
 }
 /* @font-face kit */
-@font-face {
+/* @font-face {
 	font-family: 'Lato';
 	font-style: normal;
 	font-weight: 300;
@@ -295,7 +295,7 @@ input:focus {
 	font-style: normal;
 	font-weight: 900;
 	src: local('Lato Black'), local('Lato-Black'), url(../fonts/lato/BVtM30trf7q_jfqYeHfjtA.woff) format('woff');
-}
+} */
 /******************************************
 2. Newsletter Popup
 ******************************************/

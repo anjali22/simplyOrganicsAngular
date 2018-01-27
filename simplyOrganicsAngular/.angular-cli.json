@@ -74,7 +74,8 @@
         "./assets/vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js",
         "../node_modules/bootstrap-daterangepicker/daterangepicker.js",
         "../node_modules/jquery-validation/dist/jquery.validate.min.js",
-        "./assets/js/app.js"
+        "./assets/js/app.js",
+        "./assets/js/scripts/ecommerce/megamenu.js"
             ],
       "environmentSource": "environments/environment.ts",
       "environments": {
