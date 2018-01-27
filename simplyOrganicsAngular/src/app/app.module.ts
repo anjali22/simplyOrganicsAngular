@@ -55,6 +55,8 @@ import { InventoryDetailComponent } from './inventory-detail/inventory-detail.co
 import { InventoryEditComponent } from './inventory-edit/inventory-edit.component';
 import { InventoryDatatableComponent } from './inventory-list/inventory.datatable.component';
 import { InventoryColumnComponent} from './inventory-list/inventory.column.component';
+import { AppFooterComponent } from './app-footer/app-footer.component';
+import { AppHomeSliderComponent } from './app-home-slider/app-home-slider.component';
 
 
 
@@ -100,6 +102,8 @@ import { InventoryColumnComponent} from './inventory-list/inventory.column.compo
     InventoryColumnComponent,
     InventoryDatatableComponent,
     SalespersonDetailComponent,
+    AppFooterComponent,
+    AppHomeSliderComponent,
 
   ],
   imports: [
