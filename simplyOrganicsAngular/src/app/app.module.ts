@@ -57,6 +57,9 @@ import { InventoryDatatableComponent } from './inventory-list/inventory.datatabl
 import { InventoryColumnComponent} from './inventory-list/inventory.column.component';
 import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 
+import { AppFooterComponent } from './app-footer/app-footer.component';
+import { AppHomeSliderComponent } from './app-home-slider/app-home-slider.component';
+
 
 
 
@@ -102,6 +105,11 @@ import { AppNavbarComponent } from './app-navbar/app-navbar.component';
     InventoryDatatableComponent,
     SalespersonDetailComponent,
     AppNavbarComponent,
+
+
+    AppFooterComponent,
+    AppHomeSliderComponent,
+
 
   ],
   imports: [
