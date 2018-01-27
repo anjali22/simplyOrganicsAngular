@@ -6,7 +6,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,  
   styleUrls: ['./app-home-slider.component.css',
   '../../assets/css/ecommerce/style.css',
-  '../../assets/css/ecommerce/revolution-slider.css'
+ // '../../assets/css/ecommerce/revolution-slider.css'
 ]
 })
 export class AppHomeSliderComponent implements OnInit {
