@@ -5,21 +5,21 @@ declare var jQuery:any;
 declare var $:any;
 
 @Component({
- // templateUrl: './product-list.component.html',
- template: `<datatable [dataset]=results>
-                  <column [value]="'store_id'" [header]="'Id'"></column>
-                  <column [value]="'name'" [header]="'Name'"></column>
-                  <column [value]="'description'" [header]="'Description'"></column>
-                  <column [value]="'address'" [header]="'Address'"></column> 
-                  <column [value]="'pincode'" [header]="'Pin Code'"></column>
-                  <column [value]="'city'" [header]="'City'"></column>
-                  <column [value]="'state'" [header]="'State'"></column>
-                  <column [value]="'country'" [header]="'Country'"></column>                  
-                  <column [value]="'contact'" [header]="'Contact'"></column>
-                  <column [value]="'date'" [header]="'Date'"></column>
+  templateUrl: './store-view.component.html',
+ /* template: `<store-datatable [dataset]=results>
+                  <store-column [value]="'store_id'" [header]="'Id'"></store-column>
+                  <store-column [value]="'name'" [header]="'Name'"></store-column>
+                  <store-column [value]="'description'" [header]="'Description'"></store-column>
+                  <store-column [value]="'address'" [header]="'Address'"></store-column> 
+                  <store-column [value]="'pincode'" [header]="'Pin Code'"></store-column>
+                  <store-column [value]="'city'" [header]="'City'"></store-column>
+                  <store-column [value]="'state'" [header]="'State'"></store-column>
+                  <store-column [value]="'country'" [header]="'Country'"></store-column>                  
+                  <store-column [value]="'contact'" [header]="'Contact'"></store-column>
+                  <store-column [value]="'date'" [header]="'Date'"></store-column>
                   
-             </datatable>
-             `,
+             </store-datatable>
+             `, */
 })
 
 
@@ -39,19 +39,19 @@ export class StoreViewComponent implements OnInit, AfterViewInit{
     });
   }
 
-	ngAfterViewInit() {
-		$('#example-table').DataTable({
-		  pageLength: 10,
-		  fixedHeader: true,
-		  dom: '<"html5buttons"B>lTfgitp',
-		  buttons: [
-		      {extend: 'copy'},
-		      {extend: 'csv'},
-		      {extend: 'excel', title: 'ExampleFile'},
-		      {extend: 'pdf', title: 'ExampleFile'},
-		      {extend: 'print',}
-		  ]
-		});
-	}
+  ngAfterViewInit() {
+    $('#example-table').DataTable({
+      pageLength: 10,
+      fixedHeader: true,
+      dom: '<"html5buttons"B>lTfgitp',
+      buttons: [
+          {extend: 'copy'},
+          {extend: 'csv'},
+          {extend: 'excel', title: 'ExampleFile'},
+          {extend: 'pdf', title: 'ExampleFile'},
+          {extend: 'print', }
+      ]
+    });
+  }
 }
 

@@ -33,18 +33,18 @@ import {Router} from '@angular/router';
 </div>
   `
 })
-export class CustomerDatatableComponent { 
- 
+export class CustomerDatatableComponent {
+
   @Input() dataset;
   columns: CustomerColumnComponent[] = [];
 
   constructor(private router: Router) { }
  
-  addColumn(column){
+  addColumn(column) {
     this.columns.push(column);
   }
-  details(value){
+  details(value) {
     console.log("details called", value.user_id);
-    this.router.navigate(['/admin/customerdetail',value.user_id]);
+    this.router.navigate(['/admin/customerdetail', value.user_id]);
   }
 }

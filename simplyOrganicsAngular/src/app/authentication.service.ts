@@ -23,24 +23,24 @@ export class AuthenticationService {
     private _router: Router){}
 
   logout() {
-    localStorage.removeItem("user");
+    localStorage.removeItem('user');
     this._router.navigate(['/login']);
   }
 
-  login(user){
-    var authenticatedUser = users.find(u => u.email === user.email);
-    if (authenticatedUser){
-      localStorage.setItem("user", JSON.stringify(authenticatedUser));
-      this._router.navigate(['/admin']);      
+  login(user) {
+    const authenticatedUser = users.find(u => u.email === user.email);
+    if (authenticatedUser) {
+      localStorage.setItem('user', JSON.stringify(authenticatedUser));
+      this._router.navigate(['/admin']);
       return true;
     }
     return false;
 
   }
 
-   checkCredentials( ){
-    if (localStorage.getItem("user") === null){
+   checkCredentials( ) {
+    if (localStorage.getItem('user') === null) {
         this._router.navigate(['Login']);
     }
-  } 
+  }
 }

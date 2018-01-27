@@ -5,29 +5,17 @@
     <li class="breadcrumb-item active">E-commerce Products list</li>
   </ol>
 </div>
-<div class="page-content fade-in-up">
-  <div class="ibox">
-    <div class="ibox-body">
-      <div class="table-responsive">
-        <table class="table table-striped table-bordered table-hover" id="example-table">
-          <thead>
-            <tr>
-              <th *ngFor="let column of columns">{{column.header}}</th>
-            </tr>
-          </thead>
+<product-datatable [dataset]=results>
+  <product-column [value]="'prod_id'" [header]="'Id'"></product-column>
+  <product-column [value]="'prod_name'" [header]="'Name'"></product-column>
+  <product-column [value]="'quant'" [header]="'Quantity'"></product-column>
+  <product-column [value]="'p_cat'" [header]="'Category'"></product-column>
+  <product-column [value]="'prod_measure'" [header]="'Measure'"></product-column>
+  <product-column [value]="'price_rupee'" [header]="'Rupees'"></product-column>
+  <product-column [value]="'price_dirham'" [header]="'Dirham'"></product-column>
+  <product-column [value]="'price_dollar'" [header]="'Dollar'"></product-column>
+  <product-column [value]="'warehouse'" [header]="'Warehouse'"></product-column>
+  <product-column [value]="'van'" [header]="'Van'"></product-column>
+  <product-column [value]="'store'" [header]="'Store'"></product-column>
 
-          <tbody *ngFor="let row of dataset">
-              <tr>
-                <td *ngFor="let column of columns">{{row[column.value]}}</td>
-                <td>
-                    <button class="btn btn-default btn-sm btn-flat" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil font-14"></i></button>
-                    <button class="btn btn-default btn-sm btn-flat" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash font-14"></i></button>
-                  </td>
-                  </tr>
-                </tbody>
-
-        </table>
-      </div>
-    </div>
-  </div>
-</div>
+</product-datatable>

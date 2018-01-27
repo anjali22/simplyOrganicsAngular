@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup,ReactiveFormsModule, Validators, FormBuilder } from '@angular/forms';
-//import {Hero} from '../../../models/product.model';
-import {Product} from '../product';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators, FormBuilder } from '@angular/forms';
+// import {Hero} from '../../../models/product.model';
+import {Product} from '../models/product';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { RequestOptions } from '@angular/http';
 import {MeasureService} from '../measure.service';
-import {Measure} from '../measure';
+import {Measure} from '../models/measure';
 import {CurrencyService} from '../currency.service';
-import {Currency} from '../currency';
+import {Currency} from '../models/currency';
 
 @Component({
   selector: 'app-product-edit',
@@ -52,16 +52,16 @@ export class ProductEditComponent implements OnInit{
       store: [''] ,
       warehouse: [''] ,
       van: [''] ,
-      
+
   });
 
-  
   }
 
   getMeasures(): void {
     this.measureService.getMeasures()
       .subscribe(measures =>  {this.measures = measures, console.log(measures, "measures")},
-                 err => {console.log(err);}
+                 err => {console.log(err);
+                }
       );
   }
 
@@ -79,11 +79,11 @@ export class ProductEditComponent implements OnInit{
     
     var body = model;
     console.log("body-----", body);
-    var bodySt = JSON.stringify(body);
-    console.log("body-----", bodySt);
+    /* var bodySt = JSON.stringify(body);
+    console.log("body-----", bodySt); */
     
-    var headers = new Headers();
-    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+   /*  var headers = new Headers();
+    headers.append('Content-Type', 'application/x-www-form-urlencoded'); */
 
     this.http
       .post('http://localhost:3000/productedit',

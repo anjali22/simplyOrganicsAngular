@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup,ReactiveFormsModule, Validators, FormBuilder } from '@angular/forms';
-//import {Hero} from '../../../models/product.model';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators, FormBuilder } from '@angular/forms';
+// import {Hero} from '../../../models/product.model';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { RequestOptions } from '@angular/http';
-import {Store} from '../store';
+import {Store} from '../models/store';
 
 @Component({
   selector: 'app-store-edit',

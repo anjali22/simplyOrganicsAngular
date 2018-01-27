@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup,ReactiveFormsModule, Validators, FormBuilder } from '@angular/forms';
-//import {Hero} from '../../../models/product.model';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators, FormBuilder } from '@angular/forms';
+// import {Hero} from '../../../models/product.model';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { RequestOptions } from '@angular/http';
-//import {Customer} from '../customer.interface';
-import { Customer } from "../customer.interface";
+// import {Customer} from '../customer.interface';
+import { Customer } from '../models/customer';
 
 @Component({
   selector: 'app-customer-edit',
@@ -17,10 +17,10 @@ export class CustomerEditComponent {
     public myForm: FormGroup; // our model driven form
     public submitted: boolean; // keep track on whether form is submitted
     public events: any[] = []; // use later to display form changes
-  
+
     constructor(private _fb: FormBuilder, private http: HttpClient) { } // form builder simplify form initialization
     results: object[];
-    
+
     ngOnInit() {
         // the short way
       this.myForm = this._fb.group({
@@ -28,17 +28,17 @@ export class CustomerEditComponent {
         last_name: [''] ,
     });
     }
-  
+
     save(model: Customer, isValid: boolean) {
-  
+
       console.log(model, isValid);
       this.submitted = true; // set form submit to true
-      
-      var body = "fname=" + model.first_name + "&lname=" + model.last_name ;
+
+      var body = 'fname=' + model.f_name + '&lname=' + model.l_name ;
       console.log("body-----", body);
       var bodySt = JSON.stringify(body);
       console.log("body-----", bodySt);
-      
+
       var headers = new Headers();
       headers.append('Content-Type', 'application/x-www-form-urlencoded');
   
@@ -52,10 +52,6 @@ export class CustomerEditComponent {
           }, error => {
               console.log(error);
           });
-  
-       
-       
       }
-  
+
   }
-  
