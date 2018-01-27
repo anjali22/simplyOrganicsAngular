@@ -19,7 +19,7 @@ export class InventoryService {
   constructor(
     private http: HttpClient, private messageService: MessageService) { }
 
-  /** GET measures from the server */
+  /** GET inventory from the server */
   getInventory(): Observable<Inventory[]> {
     return this.http.get<Inventory[]>(this.measuresUrl)
       .pipe(
@@ -28,11 +28,18 @@ export class InventoryService {
       );
   }
 
-  /** POST: add a new hero to the server */
+  /** POST: add a new inventory to the server */
   addInventory (inventory: Inventory): Observable<Inventory> {
-    return this.http.post<Inventory>('http://localhost:3000/inventoryedit', inventory, httpOptions).pipe(
+    return this.http.post<Inventory>('http://localhost:3000/inventoryadd', inventory, httpOptions).pipe(
       tap((hero: Inventory) => this.log(`added hero`)),
       catchError(this.handleError<Inventory>('addHero'))
+    );
+  }
+  /** PUT: update the inventory on the server */
+  updateInventory (inventory: Inventory): Observable<any> {
+    return this.http.post('http://localhost:3000/inventoryedit', inventory, httpOptions).pipe(
+      tap(_ => this.log(`updated hero`)),
+      catchError(this.handleError<any>('updateHero'))
     );
   }
 

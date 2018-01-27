@@ -39,12 +39,12 @@ export class SalespersonDatatableComponent {
  
   constructor(private router: Router) { }
 
-  addColumn(column){
+  addColumn(column) {
     this.columns.push(column);
   }
 
-  details(value){
-    console.log("details called", value.prod_id);
-    this.router.navigate(['/admin/productdetail',value.prod_id]);
+  details(value) {
+    console.log('details called', value.user_id);
+    this.router.navigate(['/admin/salespersondetail', value.user_id]);
   }
 }

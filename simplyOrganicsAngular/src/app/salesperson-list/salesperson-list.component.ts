@@ -11,7 +11,6 @@ declare var $:any;
  <salesperson-column [value]="'f_name'" [header]="'Fisrt Name'"></salesperson-column>
  <salesperson-column [value]="'l_name'" [header]="'Last Name'"></salesperson-column>
  <salesperson-column [value]="'email'" [header]="'Email'"></salesperson-column>
- 
 </salesperson-datatable>
 `,
 })

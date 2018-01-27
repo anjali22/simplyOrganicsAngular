@@ -75,13 +75,13 @@ export class ProductDetailComponent {
       this.myForm.patchValue({prod_desc: this.results[0].prod_desc});
       this.myForm.patchValue({prod_measure: this.results[0].prod_measure});
       this.myForm.patchValue({prod_cat: this.results[0].cat_id});
-      this.myForm.patchValue({prod_quant_total: this.results[0].quant});
+      /* this.myForm.patchValue({prod_quant_total: this.results[0].quant});
       this.myForm.patchValue({prod_price_dollar: this.results[0].price_dollar});
       this.myForm.patchValue({prod_price_rupee: this.results[0].price_rupee});
       this.myForm.patchValue({prod_price_dirham: this.results[0].price_dirham});
       this.myForm.patchValue({prod_in_store: this.results[0].store});
       this.myForm.patchValue({prod_in_warehouse: this.results[0].warehouse});
-      this.myForm.patchValue({prod_in_van: this.results[0].van});
+      this.myForm.patchValue({prod_in_van: this.results[0].van}); */
     });
 
   // this.myForm.setValue({

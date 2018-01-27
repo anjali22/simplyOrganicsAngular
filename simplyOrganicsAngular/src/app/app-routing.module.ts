@@ -60,6 +60,7 @@ import { InventoryListComponent } from './inventory-list/inventory-list.componen
 
 import {SalespersonListComponent} from './salesperson-list/salesperson-list.component';
 import {SalespersonEditComponent} from './salesperson-edit/salesperson-edit.component';
+import { SalespersonDetailComponent } from './salesperson-detail/salesperson-detail.component';
 
 import {StoreEditComponent} from './store-edit/store-edit.component';
 import {StoreViewComponent} from './store-view/store-view.component';
@@ -86,7 +87,8 @@ const appRoutes: Routes = [
       { path: 'storeview', component: StoreViewComponent},
       { path: 'storeedit', component: StoreEditComponent},
       { path: 'salespersonlist', component: SalespersonListComponent},
-      { path: 'salespersonedit', component: SalespersonEditComponent},      
+      { path: 'salespersonedit', component: SalespersonEditComponent},
+      { path: 'salespersondetail/:userid', component: SalespersonDetailComponent},
       { path: 'dashboard_2', component: Dashboard2Component},
       { path: 'dashboard_3', component: Dashboard3Component},
       { path: 'dashboard_4', component: Dashboard4Component},

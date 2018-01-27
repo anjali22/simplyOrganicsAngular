@@ -36,17 +36,17 @@ export class CustomerDetailComponent implements OnInit {
     private http: HttpClient
    ) {  
     this.myForm = fb.group({  
-      user_id: ['', Validators.required] , 
-      f_name: ['', Validators.required] , 
+      user_id: ['', Validators.required] ,
+      f_name: ['', Validators.required] ,
       l_name: ['', Validators.required]  ,
       addedBy: ['', Validators.required]  ,
       address: ['', Validators.required]  ,
       city_name: ['', Validators.required]  ,
-      contact: ['', Validators.required],  
-      country_name: ['', Validators.required] , 
-      dateAdded: ['', Validators.required],  
+      contact: ['', Validators.required],
+      country_name: ['', Validators.required] ,
+      dateAdded: ['', Validators.required],
       email: ['', Validators.required]  ,
-      landmark: ['', Validators.required],  
+      landmark: ['', Validators.required],
       pincode: ['', Validators.required]  ,
       state_name: ['', Validators.required]  ,
     
@@ -82,10 +82,7 @@ export class CustomerDetailComponent implements OnInit {
       this.myForm.patchValue({email: this.results[0].email});
       this.myForm.patchValue({dateAdded: this.results[0].dateAdded});
       this.myForm.patchValue({addedBy: this.results[0].addedBy});
-      
-      
-      
-  })
+  });
 }
 
 update(model: Customer, isValid: boolean) {

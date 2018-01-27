@@ -29,12 +29,11 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductColumnComponent } from './product-list/product.column.component';
 import { ProductDatatableComponent } from './product-list/product.datatable.component';
 
-
 import { SalespersonListComponent } from './salesperson-list/salesperson-list.component';
 import { SalespersonEditComponent } from './salesperson-edit/salesperson-edit.component';
 import { SalespersonColumnComponent } from './salesperson-list/salesperson.column.component';
 import { SalespersonDatatableComponent } from './salesperson-list/salesperson.datatable.component';
-
+import { SalespersonDetailComponent } from './salesperson-detail/salesperson-detail.component';
 
 import { StoreViewComponent } from './store-view/store-view.component';
 import { StoreEditComponent } from './store-edit/store-edit.component';
@@ -99,7 +98,8 @@ import { InventoryColumnComponent} from './inventory-list/inventory.column.compo
     InventoryDetailComponent,
     InventoryEditComponent,
     InventoryColumnComponent,
-    InventoryDatatableComponent
+    InventoryDatatableComponent,
+    SalespersonDetailComponent,
 
   ],
   imports: [
