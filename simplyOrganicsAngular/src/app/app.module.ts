@@ -55,6 +55,7 @@ import { InventoryDetailComponent } from './inventory-detail/inventory-detail.co
 import { InventoryEditComponent } from './inventory-edit/inventory-edit.component';
 import { InventoryDatatableComponent } from './inventory-list/inventory.datatable.component';
 import { InventoryColumnComponent} from './inventory-list/inventory.column.component';
+import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 
 
 
@@ -100,6 +101,7 @@ import { InventoryColumnComponent} from './inventory-list/inventory.column.compo
     InventoryColumnComponent,
     InventoryDatatableComponent,
     SalespersonDetailComponent,
+    AppNavbarComponent,
 
   ],
   imports: [
