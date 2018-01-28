@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
+import { FormGroup, FormControl, FormBuilder, Validators, FormArray } from '@angular/forms';
+import { Category } from '../models/category';
+import { CategoryService} from '../services/category.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,9 +13,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppNavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient,
+    private categoryService: CategoryService
+  ) { }
+
+  results: object[];
 
   ngOnInit() {
+    this.categoryService.getCategory().subscribe(data => {
+      this.results = data['results'];
+      console.log('Categories-------', this.results);
+    });
   }
 
 }

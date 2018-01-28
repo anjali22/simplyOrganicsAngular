@@ -28,7 +28,7 @@
     "animate.css": "^3.5.2",
     "auth0-js": "^9.0.3",
     "autoprefixer": "^7.2.4",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^4.0.0-beta",
     "bootstrap-datepicker": "^1.7.1",
     "bootstrap-daterangepicker": "^2.1.25",
     "bootstrap-tagsinput": "^0.7.1",
