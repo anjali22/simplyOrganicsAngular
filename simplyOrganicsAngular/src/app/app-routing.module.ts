@@ -64,12 +64,14 @@ import { SalespersonDetailComponent } from './salesperson-detail/salesperson-det
 
 import {StoreEditComponent} from './store-edit/store-edit.component';
 import {StoreViewComponent} from './store-view/store-view.component';
+import {AppProductDetailsComponent} from './app-product-details/app-product-details.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent},
+  {path: 'productdetails', component: AppProductDetailsComponent},
   { path: 'admin', component: FullLayout, 
     children: [
       { path: '', component: AdminHomeComponent },

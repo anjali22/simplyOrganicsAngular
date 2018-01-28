@@ -61,6 +61,7 @@ import { AppFooterComponent } from './app-footer/app-footer.component';
 import { AppHomeSliderComponent } from './app-home-slider/app-home-slider.component';
 import { AppServiceSectionComponent } from './app-service-section/app-service-section.component';
 import { AppLatestNewsComponent } from './app-latest-news/app-latest-news.component';
+import { AppProductDetailsComponent } from './app-product-details/app-product-details.component';
 
 
 
@@ -113,6 +114,7 @@ import { AppLatestNewsComponent } from './app-latest-news/app-latest-news.compon
     AppHomeSliderComponent,
     AppServiceSectionComponent,
     AppLatestNewsComponent,
+    AppProductDetailsComponent,
 
 
   ],

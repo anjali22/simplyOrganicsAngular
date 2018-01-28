@@ -42,7 +42,7 @@
       "scripts": ["../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/popper.js/dist/umd/popper.min.js",
         "../node_modules/bootstrap/dist/js/bootstrap.min.js",
-        "../node_modules/bootstrap/js/modal.js",
+        "../node_modules/bootstrap/js/dist/modal.js",
         "../node_modules/metismenu/dist/metisMenu.min.js",
         "../node_modules/jquery-slimscroll/jquery.slimscroll.min.js",
         "../node_modules/toastr/build/toastr.min.js",
@@ -74,8 +74,7 @@
         "./assets/vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js",
         "../node_modules/bootstrap-daterangepicker/daterangepicker.js",
         "../node_modules/jquery-validation/dist/jquery.validate.min.js",
-        "./assets/js/app.js",
-        "./assets/js/scripts/ecommerce/megamenu.js"
+        "./assets/js/app.js"
             ],
       "environmentSource": "environments/environment.ts",
       "environments": {
