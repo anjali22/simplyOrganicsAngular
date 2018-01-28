@@ -46,6 +46,7 @@ import {CurrencyService} from './currency.service';
 import {InventoryService} from './services/inventory.service';
 import { ProductService } from './services/product.service';
 import { StoreService } from './services/store.service';
+import { CategoryService } from './services/category.service';
 
 import { AppHeaderComponent } from './app-header/app-header.component';
 
@@ -62,6 +63,7 @@ import { AppHomeSliderComponent } from './app-home-slider/app-home-slider.compon
 import { AppServiceSectionComponent } from './app-service-section/app-service-section.component';
 import { AppLatestNewsComponent } from './app-latest-news/app-latest-news.component';
 import { AppProductDetailsComponent } from './app-product-details/app-product-details.component';
+import { AppShopComponent } from './app-shop/app-shop.component';
 
 
 
@@ -115,6 +117,7 @@ import { AppProductDetailsComponent } from './app-product-details/app-product-de
     AppServiceSectionComponent,
     AppLatestNewsComponent,
     AppProductDetailsComponent,
+    AppShopComponent,
 
 
   ],
@@ -138,7 +141,8 @@ import { AppProductDetailsComponent } from './app-product-details/app-product-de
     CurrencyService,
     InventoryService,
     StoreService,
-    ProductService
+    ProductService,
+    CategoryService
   ],
   bootstrap: [AppComponent]
 })
