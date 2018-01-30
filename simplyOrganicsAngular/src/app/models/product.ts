@@ -8,4 +8,5 @@ export class Product {
     cat_id: number;
     quant_id: number;
     measure_id: number;
+    image_url: string;
 }

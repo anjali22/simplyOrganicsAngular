@@ -64,7 +64,9 @@ import { AppServiceSectionComponent } from './app-service-section/app-service-se
 import { AppLatestNewsComponent } from './app-latest-news/app-latest-news.component';
 import { AppProductDetailsComponent } from './app-product-details/app-product-details.component';
 import { AppShopComponent } from './app-shop/app-shop.component';
-
+//import the ng2-file-upload directive so we can add it to our declarations.
+import { FileSelectDirective } from 'ng2-file-upload';
+import { AppProductComponent } from './app-shop/app-product/app-product.component';
 
 
 
@@ -118,7 +120,8 @@ import { AppShopComponent } from './app-shop/app-shop.component';
     AppLatestNewsComponent,
     AppProductDetailsComponent,
     AppShopComponent,
-
+    FileSelectDirective,
+    AppProductComponent
 
   ],
   imports: [

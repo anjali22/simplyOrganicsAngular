@@ -64,6 +64,24 @@
                 <input class="form-control" placeholder="Product Price" type="text" formControlName="prod_price">
               </div>
             </div>
+            <!-- File input for the file-upload plugin, with special ng2-file-upload directive called ng2FileSelect -->
+<!-- <input type="file" name="photo" ng2FileSelect [uploader]="uploader" /> -->
+<!-- button to trigger the file upload when submitted -->
+<!-- <button type="button" class="btn btn-success btn-s" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
+      Upload with ng-2 file uploader
+</button>
+             -->
+
+             <!-- <input id="photo" type="file" />
+             <button type="button" class="btn btn-success btn-s" (click)="upload()">
+              Upload with method 2
+              </button> -->
+
+             <div class="form-group row">
+              <label for="avatar">Product Image</label>
+              <input type="file" id="photo" (change)="onFileChange($event)" #fileInput>
+              <button type="button" class="btn btn-sm btn-default" (click)="clearFile()">clear file</button>
+            </div>
 
           </div>
         </div>
